@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+ --measure:48rem;
+ --font-code:Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+ --color-mode:"light";
+ --color-dark-body:#1a202c;
+ --color-dark-text:#bee3f8;
+ --color-dark-headings:#bee3f8;
+ --color-dark-code-bg:#2d3748;
+ --color-dark-code-text:#f7fafc;
+ --color-dark-code-string:#cbd5e0;
+ --color-dark-code-op:#cbd5e0;
+ --color-dark-alpha:rgba(0,0,0,0.1);
+ --color-light-alpha:hsla(0,0%,100%,0.9);
+ --color-body:#f9f9f9;
+ --color-text:#4a5568;
+ --color-links:#4299e1;
+ --color-headings:#4a5568;
+ --color-code-bg:#edf2f7;
+ --color-code-text:#2d3748;
+ --color-code-string:#718096;
+ --color-code-op:#a0aec0;
+ --border-color:var(--color-dark-alpha);
+ --color-copy:#4a5568;
+ --color-copy-par-hover:#cbd5e0;
+ --color-post-nav-bg:#edf2f7;
+ --color-post-nav-label:#a0aec0;
+ --color-post-newsletter-bg:#edf2f7;
+ --color-post-newsletter-text:#4a5568;
+}
+
+body {
+	background:var(--color-dark-body);
+	color:var(--color-dark-text);
+ }
+
+ @media (prefers-color-scheme:dark) {
+	:root {
+		--color-mode:"dark";
+	}
+
+	:root:not([data-user-color-scheme]) {
+		--color-body:var(--color-dark-body);
+		--color-text:var(--color-dark-text);
+		--color-headings:var(--color-dark-headings);
+		--color-code-bg:var(--color-dark-code-bg);
+		--color-code-text:var(--color-dark-code-text);
+		--color-code-string:var(--color-dark-code-string);
+		--color-code-op:var(--color-dark-code-op);
+		--border-color:var(--color-light-alpha);
+	}
+ }
+
+ [data-user-color-scheme=dark] {
+	--color-body:var(--color-dark-body);
+	--color-text:var(--color-dark-text);
+	--color-headings:var(--color-dark-headings);
+	--color-code-bg:var(--color-dark-code-bg);
+	--color-code-text:var(--color-dark-code-text);
+	--color-code-string:var(--color-dark-code-string);
+	--color-code-op:var(--color-dark-code-op);
+	--border-color:var(--color-light-alpha);
+ }
+
+a {
+	color:var(--color-links);
+}
+
+a:hover {
+ text-decoration:underline;
+ transition-property:all;
+ transition-duration:.9s;
+}
+
+a:focus {
+ outline:1px dotted;
+ outline-offset:4px;
+}
+
+header a,
+header a:hover {
+ text-decoration:none;
+ border-style:none
+}
+
+h1, h2, h3, h4 {
+ font-weight:500;
+ line-height:1.25;
+ color:var(--color-headings);
+}
+
+h1 {
+ font-size:1.875rem;
+}
+
+h2 {
+ font-size:1.5rem;
+}
+
+h3 {
+ font-size:1.25rem;
+}
+
+h4 {
+ font-size:1.125rem;
+}

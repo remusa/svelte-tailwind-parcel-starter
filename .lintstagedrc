@@ -1,0 +1,6 @@
+{
+  '*.+(js|jsx|ts|tsx|svelte)': ['eslint'],
+  '*.+(js|jsx|ts|tsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx|svelte)': [
+    'prettier --write',
+  ],
+}
